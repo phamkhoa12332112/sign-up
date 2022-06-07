@@ -1,0 +1,232 @@
+html{
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #6e429e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    width: 600px;
+    height: 440px;
+    background-color: #3c1467;
+}
+.container-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #58226e;
+}
+.container-down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    padding: 30px 30px 20px 30px;
+}
+.logofb{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    border: 1px solid #843764;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: -5px;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+}
+.logofb i{
+    font-size: 30px ;
+    color: #4b6ea9;
+}
+.logotw{
+    display: flex;
+    height: 85px;
+    width: 88px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c1467;
+    margin-left: -5px;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+.logotw::before{
+    content: "";
+    position: absolute;
+    inset: 4px;
+    top: 0;
+    border: 1px solid #843764;
+    border-radius: 50%;
+}
+.logotw i{
+    font-size: 30px;
+    color: #65bbf2;
+}
+.textfb{
+    display: flex;
+    color: #a293b2;
+    font-size: 8px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    user-select: none;
+}
+.texttw{
+    display: flex;
+    color: #a293b2;
+    font-size: 8px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    user-select: none;
+}
+form input{
+    font-family: inherit;
+    position: absolute;
+    inset: 0;
+    background-color: unset;
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+/* input::-webkit-input-placeholder {
+    font-size: 10px;
+    line-height: 3;
+    color: #a293b2;
+} */
+.sign-up-email{
+    margin-bottom: 20px;
+    position: relative;
+    height: 40px;
+    width: 250px;
+    padding: 10px;
+    background-color: #371260;
+    border: 1px solid #843764;
+    border-radius: 5px;
+    color: white;
+}
+.sign-up-password{
+    position: relative;
+    height: 40px;
+    width: 250px;
+    padding: 10px;
+    background-color: #371260;
+    border: 1px solid #843764;
+    border-radius: 5px;
+    color: white;
+}
+form label{
+    font-family: inherit;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    background-color: unset;
+    outline: none;
+    border: none;
+    padding: 0px 5px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 80%);
+    transition: .1s;
+    transform-origin: left;
+    transform: translate(0, -50%);
+    user-select: none;
+}
+form label::before{
+    content: "";
+    position: absolute;
+    bottom: 1.5px;
+    left:  0;
+    width: 100%;
+    height: 50%;
+    background-color: #371260;
+    z-index: -1;
+}
+form input:focus + label{
+    top: 0;
+    transform: translate(0, -50%) scale(0.8);
+}
+form input:not(:placeholder-shown) + label{
+    top: 0;
+    transform: translate(0, -50%) scale(0.8);
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.text p{
+    user-select: none;
+    font-size: 12px;
+    color: #a74c6d;
+    cursor: pointer;
+}
+.text p:hover{
+    transition: .1s;
+    color: #ccc;
+}
+.button-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-login button{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #14b266;
+    font-size: 16px;
+    color: #d6e7df;
+    cursor: pointer;
+}
+.button-create{
+    padding-top: 30px;
+}
+.button-create button{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffce00;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+}
+button:active{
+    transform: translateY(4px);
+}
+p:active{
+    transform: translateY(4px);
+}
+.logofb:active{
+    transform: translateY(4px);
+}
+.logotw:active{
+    transform: translateY(4px);
+}
+.button-create button:hover{
+    background-color: #ffcc00c7;
+    transition: .1s;
+}
+.button-login button:hover{
+    background-color: #14b266c7;
+    transition: .1s;
+}
